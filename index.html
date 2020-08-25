@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
     <link rel="stylesheet" href="jquery-ui.css" type="text/css" />
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,35 +12,20 @@
     
 </head>
 
+
 <body>
-
-    <body data-spy="scroll" data-target="#navbarResponsive">
-
-        <!--Start Player Section-->
-        <div id="player">
-    
-    <!--Start Navigation-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#"><img src=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#player">Player</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#para-eq">Parametric Equalizer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div id="player">
+    <div class="topnav" id="myTopnav">
+        <a href="#player" class="active">Player</a>
+        <a href="#para-eq">Parametric-EQ</a>
+        <a href="#analyser">Analyser</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     <!--Music Player Controls-->
+    
     <div class="player">
     
         <!--Display Details-->
@@ -80,6 +65,8 @@
             <i class="fa fa-volume-up"></i> 
           </div>
     </div>
+    
+    </div>
 
 <div id="para-eq">
     <div class="parametric-eq-box">
@@ -107,15 +94,21 @@
             data-angleOffset="-125"data-angleArc="250"/>
             </div>
 
-          
-
-
     </div>
+
+    
 </div>
+
+<div id="analyser">
+    <canvas id="spectrum"></canvas>
+</div>
+
     <script type="text/javascript" src="jquery.js" charset="utf-8"></script>
     <script type="text/javascript" src="jquery-ui.js" charset="utf-8"></script>
-     <script src="jquery_knob.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="jquery_knob.js"></script>
      <script src="player.js"></script>
+     <!--<script src="analyser.js"></script>-->
     <!--<script src="audio.js"></script>-->
     <script src="parametric_eq.js"></script>
     <script src="app.js"></script>

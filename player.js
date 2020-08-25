@@ -19,7 +19,7 @@ let updateTimer;
   
 // Create the audio element for the player 
 let curr_track = document.createElement('audio'); 
-  
+curr_track.crossOrigin = 'anonymous';
 // Define the list of tracks that have to be played 
 let track_list = [ 
   { 
@@ -184,3 +184,12 @@ function loadTrack(track_index) {
   }
   // Load the first track in the tracklist 
 loadTrack(track_index);
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }

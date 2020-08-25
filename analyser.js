@@ -1,21 +1,5 @@
-"use strict";
+
 var audioContext = new AudioContext();
-
-var source = audioContext.createMediaElementSource(curr_track);
-var parametricEQ1 = audioContext.createBiquadFilter();
-parametricEQ1.type = "peaking";
-parametricEQ1.gain.value = 0; // allow the user to change this
-parametricEQ1.Q.value = 1; // allow the user to change this
-parametricEQ1.frequency.value = 1000;
-
-source.connect(parametricEQ1);
-parametricEQ1.connect(audioContext.destination);
-
-/*function parametricEQ(inputConnection, outputConnection) {
-    inputConnection.connect(parametricEQ1);
-    parametricEQ1.connect(outputConnection);
-}*/
-
 const audioEle = new Audio();
 audioEle.crossOrigin = 'anonymous';
 curr_track.crossOrigin = 'anonymous';
@@ -25,12 +9,12 @@ audioEle.src = "";
 audioEle.autoplay = true;
 audioEle.preload = 'auto';
 
-//const audioSourceNode = audioContext.createMediaElementSource(curr_track);
+const audioSourceNode = audioContext.createMediaElementSource(curr_track);
 
 //Create analyser node
 const analyserNode = audioContext.createAnalyser();
 //analyserNode.fftSize = 256;
-analyserNode.fftSize = 512;
+analyserNode.fftSize = 256;
 
 const bufferLength = analyserNode.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
