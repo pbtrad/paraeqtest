@@ -93,7 +93,7 @@ p{
     margin-top: 25px; 
   } 
     
-  /*.track-art { 
+  .track-art { 
     margin: 25px; 
     height: 250px; 
     width: 250px; 
@@ -102,8 +102,7 @@ p{
     background-size: cover; 
     background-position: center; 
     border-radius: 15%; 
-  } */
-    
+  }     
   /* Changing the font sizes to suitable ones */
   .now-playing { 
     font-size: 1rem; 
