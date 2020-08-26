@@ -26,6 +26,40 @@ $(function() {
 
         }
     });
+    
+    $(".thresholdDial").knob({
 
+        change: function(valueThresholdDial) {
+            compressor.threshold.value = valueThresholdDial;
+        }
+    });
+
+    $(".ratioDial").knob({
+
+        change: function(valueRatioDial) {
+            compressor.ratio.value = valueRatioDial;
+        }
+    });
+
+    $(".kneeDial").knob({
+
+        change: function(valueKneeDial) {
+            compressor.knee.value = valueKneeDial;
+        }
+    });
+
+    $(".releaseDial").knob({
+
+        change: function(valueReleaseDial) {
+            compressor.release.value = valueReleaseDial;
+        }
+    });
+
+    $(".attackDial").knob({
+
+        change: function(valueAttackDial) {
+            compressor.attack.value = valueAttackDial;
+        }
+    });
 
 });
