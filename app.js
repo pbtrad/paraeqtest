@@ -26,6 +26,58 @@ $(function() {
 
         }
     });
+
+    $(".freqDial").knob({
+
+        change: function(valueFreqDial) {
+            parametricEQ2.frequency.value = valueFreqDial;
+
+
+        }
+    });
+
+    $(".bandwidthDial").knob({
+
+        change: function(valueBandwidthDial) {
+            parametricEQ2.Q.value = valueBandwidthDial;
+
+        }
+    });
+
+    $(".gainDial").knob({
+
+        change: function(valueGainDial) {
+            parametricEQ2.gain.value = valueGainDial;
+
+
+        }
+    });
+
+    $(".freqDial").knob({
+
+        change: function(valueFreqDial) {
+            parametricEQ3.frequency.value = valueFreqDial;
+
+
+        }
+    });
+
+    $(".bandwidthDial").knob({
+
+        change: function(valueBandwidthDial) {
+            parametricEQ3.Q.value = valueBandwidthDial;
+
+        }
+    });
+
+    $(".gainDial").knob({
+
+        change: function(valueGainDial) {
+            parametricEQ3.gain.value = valueGainDial;
+
+
+        }
+    });
     
     $(".thresholdDial").knob({
 

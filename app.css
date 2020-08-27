@@ -1,3 +1,79 @@
+body {
+  background-color: #6b9199;
+}
+
+
+.graphic-eq-box {
+  position:relative;
+  /*position: absolute;*/
+  /*top: 25%;
+  left: 75%;*/
+  align-items: center;
+  margin: 0 auto;
+  width:400px;
+  border: 0px solid gray;
+  
+}
+
+.graphic-eq{
+  margin:0 auto;
+  width:375px;
+  top:100px;
+  align-items: center;
+}
+
+
+.eq {
+  display: inline-block;
+  padding: 0.9em;
+  /*border: 2px solid orange;*/
+  border: 2px solid #fff;
+  align-items: center;
+}
+
+p{
+  /*color:rgba(60, 75, 111, 0.94);*/
+  color: #fafafa;
+}
+
+.eq-band{
+  display:inline-block;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  width: 100%;
+  margin-left: 4px;
+}
+
+
+.ui-widget-header{
+  background-color: rgba(29, 32, 121, 0.36)
+}
+
+.app {
+  position: relative;
+  margin: 10px;
+}
+
+.app > div {
+  width: 0.1px;
+  background-color: orange;
+  display: inline-block;
+  outline-style: solid;
+  outline-color: orange;
+  outline-width: 0.1px;
+  margin-left: 8px;
+}
+
+.bin-count {
+  position: absolute;
+  left: 30%;
+  float: right;
+  font-size: 2em;
+  height: 50px;
+}
+
+
 #para-eq {
     height: 100vh;
 }
@@ -274,6 +350,7 @@ p{
             width: 100%;
             /*position: fixed;*/
             bottom: 0;
+            z-index: 2;
     }
 
     /*#spectrum {

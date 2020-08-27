@@ -71,7 +71,7 @@ function loadTrack(track_index) {
     random_bg_color(); 
   } 
     
-  function random_bg_color() { 
+  /*function random_bg_color() { 
     // Get a random number between 64 to 256 
     // (for getting lighter colors) 
     let red = Math.floor(Math.random() * 100) + 64; 
@@ -83,7 +83,7 @@ function loadTrack(track_index) {
     
     // Set the background to the new color 
     document.body.style.background = bgColor; 
-  } 
+  } */
     
   // Functiom to reset all values to their default 
   function resetValues() { 
