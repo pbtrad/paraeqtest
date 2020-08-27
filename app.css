@@ -1,8 +1,10 @@
 body {
-  background-color: #6b9199;
+  background-color: #4b3d66;
 }
 
-
+#player {
+  
+}
 .graphic-eq-box {
   position:relative;
   /*position: absolute;*/
@@ -11,7 +13,8 @@ body {
   align-items: center;
   margin: 0 auto;
   width:400px;
-  border: 0px solid gray;
+  /*border: 0px solid gray;*/
+  
   
 }
 
@@ -21,7 +24,9 @@ body {
   top:100px;
   align-items: center;
 }
-
+.graphic-eq p {
+color: #fafafa;
+}
 
 .eq {
   display: inline-block;
@@ -57,10 +62,10 @@ p{
 
 .app > div {
   width: 0.1px;
-  background-color: orange;
+  background-color: #21D89E;
   display: inline-block;
   outline-style: solid;
-  outline-color: orange;
+  outline-color: #21D89E;
   outline-width: 0.1px;
   margin-left: 8px;
 }
@@ -103,6 +108,8 @@ p{
     border: 0px solid gray;
     
 }
+
+
 
 .parametric-eq{
     margin:0 auto;
@@ -160,6 +167,8 @@ p{
     align-items: center; 
     flex-direction: column; 
     justify-content: center; 
+    color: #fff;
+    
   } 
     
   .details { 
@@ -183,6 +192,7 @@ p{
   /* Changing the font sizes to suitable ones */
   .now-playing { 
     font-size: 1rem; 
+    
   } 
     
   .track-name { 
@@ -344,33 +354,28 @@ p{
       margin-top: 44px;
     }
   
-    #spectrum {
-        
-            height: 10rem;
+    /*#spectrum {
+        height: 100px;
+          bottom: 0;
+            max-width: 100%;
             width: 100%;
-            /*position: fixed;*/
-            bottom: 0;
-            z-index: 2;
+            max-height: 100%;
+            margin: 0 auto;
+    }*/
+    #spectrum {
+     position: absolute;
+     height: 100vh;
+     top: 0;
+     z-index: -99;
     }
 
-    /*#spectrum {
-        margin: 25px; 
-        height: 250px; 
-        width: 250px; 
-         position: absolute;
-        background-size: cover; 
-        background-position: center; 
-        border-radius: 15%;
-        top: 50px;
-        left: 42%;
-        padding-bottom: 10px;
-      }*/
-   
+    
       /*---Navbar--*/
 
       .topnav {
         background-color: #333;
         overflow: hidden;
+        position: fixed;
       }
       
       /* Style the links inside the navigation bar */
@@ -382,6 +387,7 @@ p{
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+        
       }
       
       /* Change the color of links on hover */
@@ -403,37 +409,65 @@ p{
 
 
       /*Compressor*/
+
+      .comp-description {
+        font-size: 4rem;
+        color: #fafafa;
+        position: relative;
+        top: 20rem;
+        left: 43%;
+      }
+
       .compressor-box {
-        position:relative;
-        /*top:50px;*/
-        left: 32%;
-        width:400px;
+        position: relative;
+        top: 25rem;
+        left: 4rem;
+        width:50%;
         border: 0px solid gray;
+        margin: 0 auto;
+        display: flex;
       }
 
       .compressor {
         margin:0 auto;
         width:800px;
       }
+/*.compressor-box {
+  width: 30vh;
+  left: 32%;
+  border: 0px solid gray;
+  display: flex;
+}
+
+.compressor {
+  width: 30vh;
+  display: flex;
+  margin: 0 auto;
+}*/
+.compressor p {
+  color: #fafafa;
+}
+
+
 
       .threshold-box {
-          background-color: #fafafa;
+          background-color: #000;
       }
 
       .ratio-box {
-          background-color: #fafafa;
+          background-color: #000;
       }
 
       .knee-box {
-          background-color: #fafafa;
+          background-color: #000;
       }
 
       .release-box {
-          background-color: #fafafa;
+          background-color: #000;
       }
 
       .attack-box {
-          background-color: #fafafa;
+          background-color: #000;
       }
 
       @media screen and (max-width: 600px) {
@@ -441,16 +475,18 @@ p{
         .topnav a.icon {
           float: right;
           display: block;
+          
         }
       }
       
       /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
       @media screen and (max-width: 600px) {
-        .topnav.responsive {position: relative;}
+        .topnav.responsive {position: absolute;}
         .topnav.responsive a.icon {
-          position: absolute;
+          position: relative;
           right: 0;
           top: 0;
+          overflow-y: auto;
         }
         .topnav.responsive a {
           float: none;

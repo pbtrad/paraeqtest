@@ -1,4 +1,5 @@
 "use strict";
+
 var audioContext = new AudioContext();
 
 var source = audioContext.createMediaElementSource(curr_track);
@@ -65,7 +66,7 @@ audioEle.preload = 'auto';
 //Create analyser node
 const analyserNode = audioContext.createAnalyser();
 //analyserNode.fftSize = 256;
-analyserNode.fftSize = 512;
+analyserNode.fftSize = 4096;
 
 const bufferLength = analyserNode.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
@@ -95,15 +96,17 @@ function draw() {
   //analyserNode.getFloatFrequencyData(dataArray);
   analyserNode.getByteFrequencyData(dataArray);
   //Draw black background
-  canvasCtx.fillStyle = 'rgba(56, 56, 56, 0.7)';
+  //canvasCtx.fillStyle = 'rgba(56, 56, 56, 0.1)';
+  canvasCtx.fillStyle = 'rgba(107, 145, 153, 1)';
   canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
   //Draw spectrum
   const barWidth = (canvas.width / bufferLength) * 2.5;
   let posX = 0;
   for (let i = 0; i < bufferLength; i++) {
-    const barHeight = (dataArray[i] + 600) * 2;
-    canvasCtx.fillStyle = 'rgba(' + Math.floor(barHeight + 200) + '66, 142, 115, 0.5)';
+    const barHeight = (dataArray[i] + 500) * 2;
+    //canvasCtx.fillStyle = 'rgba(39, 97, 79, 1)';
+    canvasCtx.fillStyle = 'rgba(26, 197, 143, 1)';
     canvasCtx.fillRect(posX, canvas.height - barHeight / 2, barWidth, barHeight / 2);
     posX += barWidth + 1;
   }
@@ -166,3 +169,5 @@ filter4.connect(filter5);
 filter5.connect(filter6);
 filter6.connect(filter7);
 filter7.connect(audioContext.destination);
+
+
